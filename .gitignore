@@ -19,6 +19,25 @@
 *.tar.gz
 *.rar
 
+# Log files
+*.log
+
+# BlueJ files
+*.ctxt
+
+# IntelliJ IDEA files
+*.iml
+.idea/
+
+# Eclipse files
+.classpath
+.project
+.settings/
+.history/
+
+# Maven
+target/
+
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
