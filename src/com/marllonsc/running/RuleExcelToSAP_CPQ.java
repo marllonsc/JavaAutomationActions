@@ -16,7 +16,7 @@ public class RuleExcelToSAP_CPQ {
 			
 			beginning();
 			
-			for (int i = 1; i <= 45; i++) {
+			for (int i = 1; i <= 20; i++) {
 				processRulers();
 			}
 			
@@ -67,7 +67,7 @@ public class RuleExcelToSAP_CPQ {
 		Thread.sleep(500);
 		movingLineRigut();
 		
-		for (int i = 1; i <= 29; i++) {
+		for (int i = 1; i <= 30; i++) {
 			robot.pressKeyTAB();
 			Thread.sleep(500);
 		}

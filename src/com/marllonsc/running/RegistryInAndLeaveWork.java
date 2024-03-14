@@ -14,7 +14,7 @@ public class RegistryInAndLeaveWork {
 		LocalTime now = LocalTime.now();
 
         // Set the target time for 7:59:59 AM
-        LocalTime targetTime = LocalTime.of(8,9 , 59);
+        LocalTime targetTime = LocalTime.of(7,59 , 59);
 
         // Compare the current time with the target time
         while (!now.isAfter(targetTime)) {
