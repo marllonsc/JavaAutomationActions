@@ -5,33 +5,38 @@ import java.time.LocalTime;
 import com.marllonsc.robot.RobotActionKeyboard;
 
 public class RegistryInAndLeaveWork {
-	
+
 	static RobotActionKeyboard robot = new RobotActionKeyboard();
 
-	
 	public static void main(String[] args) {
-		
+
 		LocalTime now = LocalTime.now();
 
-        // Set the target time for 7:59:59 AM
-        LocalTime targetTime = LocalTime.of(7,59 , 59);
+		// Set the target time for 7:59:59 AM
+		LocalTime targetTime;
 
-        // Compare the current time with the target time
-        while (!now.isAfter(targetTime)) {
-            robot.pressKeyDown();
-    		try {
+		targetTime = LocalTime.of(8, 0, 10);
+
+		if (now.isAfter(targetTime)) {
+			targetTime = LocalTime.of(17, 48, 10);
+		}
+
+		// Compare the current time with the target time
+		while (!now.isAfter(targetTime)) {
+			robot.pressKeyDown();
+			try {
 				Thread.sleep(800);
 				System.out.println("Running...");
-				System.out.println("date Now "+ now);
+				System.out.println("date Now " + now);
 				now = LocalTime.now();
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 
-        } 
-        
-        try {
+		}
+
+		try {
 			robot.altTab();
 			Thread.sleep(500);
 			robot.contolV();
@@ -41,8 +46,7 @@ public class RegistryInAndLeaveWork {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-        
-		
+
 	}
 
 }

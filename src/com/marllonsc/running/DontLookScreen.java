@@ -8,12 +8,13 @@ public class DontLookScreen {
 	
 	static RobotActionKeyboard robot = new RobotActionKeyboard();
 	
-	public static void main(String[] args) {
+	
+public static void main(String[] args) {
 		
 		LocalTime now = LocalTime.now();
 
         // Set the target time for 7:59:59 AM
-        LocalTime targetTime = LocalTime.of(17,59,59);
+        LocalTime targetTime = LocalTime.of(18,00,00);
 
         // Compare the current time with the target time
         while (!now.isAfter(targetTime)) {
