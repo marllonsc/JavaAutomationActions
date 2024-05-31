@@ -12,6 +12,9 @@ public class DontLookScreen {
 public static void main(String[] args) {
 		
 		LocalTime now = LocalTime.now();
+		int minutos = 3;
+		int milesegundos = 1000;
+		int time = minutos*60*milesegundos;
 
         // Set the target time for 7:59:59 AM
         LocalTime targetTime = LocalTime.of(18,00,00);
@@ -20,8 +23,8 @@ public static void main(String[] args) {
         while (!now.isAfter(targetTime)) {
             robot.pressKeyDown();
     		try {
-				Thread.sleep(800);
-				System.out.println("Running...");
+				Thread.sleep(time);
+				System.out.println(LocalTime.now().toString().substring(0,8) + " Running...");
 				now = LocalTime.now();
 			} catch (InterruptedException e) {
 				e.printStackTrace();
